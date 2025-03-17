@@ -13,10 +13,15 @@ header {
     background-color: #ddd;
 }
 
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
 }
 
 nav ul li {
@@ -29,58 +34,30 @@ nav ul li a {
     font-weight: bold;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #eaeaea;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #555;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ddd;
-}
-
+/* Responsive untuk mobile */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
+    .menu-toggle {
+        display: block;
     }
-    
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
+
     nav ul {
+        display: none; /* Sembunyikan menu awalnya */
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ddd;
+        padding: 10px 0;
     }
-    
+
+    nav ul.active {
+        display: flex; /* Tampilkan menu jika aktif */
+    }
+
     nav ul li {
+        text-align: center;
         margin: 10px 0;
-    }
-    
-    .hero {
-        padding: 30px 15px;
-    }
-    
-    .cta-button {
-        font-size: 14px;
-        padding: 8px 16px;
     }
 }
 

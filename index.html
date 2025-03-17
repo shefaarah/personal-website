@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    }
+    
     <header>
-        <div class="logo">
-            <img src="shefaarah.png" alt="My Logo">
-        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portofolio.html">Experience</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -40,7 +42,7 @@
             </div>
         </div>
     </section>
-
+    
     <section class="social-media-section">
         <div class="social-container">
             <h2>CONNECT WITH ME</h2>
