@@ -1,0 +1,377 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eaeaea;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+        
+.intro-section {
+    display: flex;
+    background-color: #f0f0ec;
+    padding: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.intro-container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    gap: 60px; /* Increased from 30px to create more space between image and text */
+    align-items: center; /* Added to vertically center the content */
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%; /* This makes the container circular */
+    overflow: hidden; /* This ensures the image stays within the circular boundary */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.text-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.text-container p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image-container {
+        margin-bottom: 20px;
+    }
+}
+
+.social-media-section {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-media-section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.social-link i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0ec;
+    transition: all 0.3s ease;
+}
+
+.social-link span {
+    font-size: 14px;
+}
+
+.social-link:hover {
+    color: #333;
+}
+
+.social-link:hover i {
+    background-color: #e0e0dc;
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 20px;
+    }
+    
+    .social-link i {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 15px;
+    }
+}
+
+.portfolio-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.portfolio-item {
+    display: flex;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.portfolio-image {
+    flex: 0 0 300px;
+    background-color: #e8e1d9; /* Beige color similar to your design */
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.portfolio-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.portfolio-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.portfolio-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+    
+    .portfolio-image {
+        flex: 0 0 200px;
+        width: 100%;
+    }
+}
+
+.contact-section {
+        background-color: #f5f5f5;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .contact-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .contact-section h2 {
+        font-size: 28px;
+        color: #222;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+    
+    .contact-form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .form-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .contact-form input {
+        flex: 1;
+        min-width: 0; /* Allows flex items to shrink below content size */
+    }
+    
+    .contact-form textarea {
+        flex: 1.5;
+        min-width: 0;
+        resize: vertical;
+    }
+    
+    .contact-form button {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 1px solid #333;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    
+    .contact-form button:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .form-row {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+        }
+        
+        .contact-form textarea {
+            rows: 3;
+        }
+    }
