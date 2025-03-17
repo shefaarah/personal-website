@@ -16,6 +16,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    padding: 0;
 }
 
 nav ul li {
@@ -28,30 +29,66 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Responsive untuk mobile */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eaeaea;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    body {
+        font-size: 14px;
     }
-
-    nav ul {
-        display: none; /* Sembunyikan menu awalnya */
+    
+    header {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #ddd;
-        padding: 10px 0;
-    }
-
-    nav ul.active {
-        display: flex; /* Tampilkan menu jika aktif */
-    }
-
-    nav ul li {
+        align-items: center;
         text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
         margin: 10px 0;
+    }
+    
+    .hero {
+        padding: 30px 15px;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
@@ -112,6 +149,133 @@ nav ul li a {
     .text-container {
         width: 100%;
         padding: 0 15px;
+    }
+}
+
+.portfolio-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.portfolio-image {
+    flex: 0 0 300px;
+    background-color: #e8e1d9;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    flex: 1;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form input {
+    flex: 1;
+    min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+.contact-form textarea {
+    flex: 1.5;
+    min-width: 0;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+    
+    .contact-form textarea {
+        rows: 3;
     }
 }
 
@@ -193,130 +357,3 @@ nav ul li a {
         gap: 15px;
     }
 }
-
-.portfolio-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-
-.portfolio-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.portfolio-image {
-    flex: 0 0 300px;
-    background-color: #e8e1d9;
-    overflow: hidden;
-}
-
-.portfolio-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.portfolio-content {
-    flex: 1;
-    padding: 30px;
-}
-
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .portfolio-image {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.contact-section {
-        background-color: #f5f5f5;
-        padding: 40px 20px;
-        text-align: center;
-    }
-    
-    .contact-container {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    
-    .contact-section h2 {
-        font-size: 28px;
-        color: #222;
-        margin-bottom: 30px;
-        font-weight: bold;
-    }
-    
-    .contact-form {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .form-row {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-        padding: 10px 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-    
-    .contact-form input {
-        flex: 1;
-        min-width: 0; /* Allows flex items to shrink below content size */
-    }
-    
-    .contact-form textarea {
-        flex: 1.5;
-        min-width: 0;
-        resize: vertical;
-    }
-    
-    .contact-form button {
-        padding: 10px 20px;
-        background-color: #fff;
-        border: 1px solid #333;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        white-space: nowrap;
-        transition: all 0.3s ease;
-    }
-    
-    .contact-form button:hover {
-        background-color: #333;
-        color: #fff;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .form-row {
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form button {
-            width: 100%;
-        }
-        
-        .contact-form textarea {
-            rows: 3;
-        }
-    }
