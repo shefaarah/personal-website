@@ -30,6 +30,7 @@ nav ul li a {
 }
 
 .hero {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,9 +64,11 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
+    .hero {
+        align-items: center;
+        text-align: center;
     }
+}
     
     header {
         flex-direction: column;
