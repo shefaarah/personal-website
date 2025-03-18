@@ -6,7 +6,8 @@
 }
 
 html, body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color:#333
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -21,6 +22,17 @@ header {
     padding: 20px;
     background-color: #ddd;
     flex-wrap: wrap;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 .logo img {
@@ -447,3 +459,69 @@ footer {
     }
 }
 
+/* darkmode.css */
+.dark-mode-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .dark-mode-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+  }
+  
+  .dark-mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .mode-text {
+    position: absolute;
+    right: -70px;
+    top: 7px;
+  }
+  
+  
