@@ -38,7 +38,7 @@ p {
 }
 
 .logo img {
-    width: 150px; /* Sesuai rekomendasi */
+    width: 100px; /* Sesuai rekomendasi */
     height: auto; /* Biar tetap proporsional */
     max-height: 50px; /* Batasi tinggi maksimal */
     padding-left: 0.5px;
