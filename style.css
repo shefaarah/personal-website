@@ -45,6 +45,12 @@ p {
     padding: auto;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 120px; /* Sesuaikan ukuran */
+        height: auto; /* Agar proporsional */
+    }
+}
 
 nav ul {
     list-style: none;
