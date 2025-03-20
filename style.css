@@ -20,23 +20,30 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ddd;
+    background-color: #D2BBA0;
     flex-wrap: wrap;
 }
 
 h1, h2, h3 {
     font-family: 'Lora', serif;
     font-weight: 600;
+    color: #5A3E2B;
 }
 
 p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     line-height: 1.6;
+    color: #6D4C41;
 }
 
 .logo img {
-    height: 50px;
+    width: 150px; /* Sesuai rekomendasi */
+    height: auto; /* Biar tetap proporsional */
+    max-height: 50px; /* Batasi tinggi maksimal */
+    padding-left: 0.5px;
+    padding: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -92,10 +99,19 @@ nav ul li a {
 }
 
 .hamburger span {
-    background: #333;
-    height: 3px;
-    width: 30px;
-    margin: 5px 0;
+    background-color: #5A3E2B;
+    height: 2px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+button {
+    background-color: #A67B5B;
+    color: white;
+    border: none;
+}
+button:hover {
+    background-color: #8C5B3B; /* Warna lebih gelap saat hover */
 }
 
 @media (max-width: 768px) {
@@ -133,7 +149,7 @@ nav ul li a {
     justify-content: center;
     text-align: center;
     padding: 50px 20px;
-    background-color: #eaeaea;
+    background-color: #EBD9C3;
 }
 
 .cta-button {
@@ -155,7 +171,7 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 10px 20px;
-    background-color: #ddd;
+    background-color: #D7B899;
     width: 100%; /* Ganti dari 100vw ke 100% */
     max-width: 100%;
 }
@@ -186,7 +202,7 @@ footer {
 
 .intro-section {
     display: flex;
-    background-color: #f0f0ec;
+    background-color: #EFE5DC;
     padding: 40px;
     width: 100%;
     align-items: center;
@@ -249,19 +265,20 @@ footer {
 }
 
 .portfolio-section {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
     padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    background-color: #E3D6C8;
 }
 
 .portfolio-item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #fff;
+    background-color: #EFE5DC;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 600px;
@@ -301,6 +318,7 @@ footer {
     background-color: #f5f5f5;
     padding: 40px 20px;
     text-align: center;
+    background-color: #E3D6C8;
 }
 
 .contact-container {
@@ -383,7 +401,7 @@ footer {
 }
 
 .social-media-section {
-    background-color: #ffffff;
+    background-color: #EFE5DC;
     padding: 50px 0;
     text-align: center;
 }
@@ -461,69 +479,3 @@ footer {
     }
 }
 
-/* darkmode.css */
-.dark-mode-container {
-    margin: 20px 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .dark-mode-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-right: 10px;
-  }
-  
-  .dark-mode-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
-  .mode-text {
-    position: absolute;
-    right: -70px;
-    top: 7px;
-  }
-  
-  
