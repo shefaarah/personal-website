@@ -50,7 +50,7 @@ p {
 
 nav ul {
     list-style: none;
-    display: flex;
+    /*display: flex; */
     gap: 20px;
 }
 
@@ -74,17 +74,17 @@ nav ul li a:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        display: flex;
+        flex-direction: column !important;
+        display: flex !important;
         width: 100%;
         text-align: center;
         background: #ddd;
         padding: 15px 0;
-        gap: 10px; /* Adds space between items */
         border-radius: 10px; /* Optional: rounded corners */
     }
 
     nav ul li {
+        display: block
         padding: 10px 0;
     }
 
