@@ -62,25 +62,25 @@ header {
 }
 
 /* Desktop Navigation */
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li {
+.nav-links li {
     display: inline-block;
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
-    color: #3E2723;
-    font-weight: bold;
+    color: #5A3E2B;
     font-size: 18px;
 }
 
+
 nav ul li a:hover {
-    color: #5A3E2B;
+    color: white;
 }
 
 /* Responsive Navigation */
@@ -109,20 +109,13 @@ nav ul li a:hover {
 
 
     /* Hide the menu by default */
-    nav ul {
-        display: none;
+    .nav-links {
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: #ddd;
         padding: 10px 0;
-        border-radius: 10px;
     }
 
-    nav ul li {
-        display: block;
-        padding: 10px 0;
-        margin: 10px 0
+    .nav-links li {
+        margin: 10px 0;
     }
 
     /* Show the menu when the checkbox is checked */
