@@ -79,6 +79,10 @@ nav ul li a:hover {
         width: 100%;
         text-align: center;
         background: #ddd;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Biar menu turun ke bawah */
         gap: 10px; /* Jarak antar item */
         margin-top: 10px; /* Jarak antara logo dan menu */
     }
