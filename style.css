@@ -76,6 +76,7 @@ nav ul li a {
     text-decoration: none;
     color: #3E2723;
     font-weight: bold;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -95,6 +96,18 @@ nav ul li a:hover {
         display: flex;
     }
 
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #c5b18d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+
     /* Hide the menu by default */
     nav ul {
         display: none;
@@ -102,19 +115,21 @@ nav ul li a:hover {
         width: 100%;
         text-align: center;
         background: #ddd;
-        padding: 15px 0;
+        padding: 10px 0;
         border-radius: 10px;
     }
 
     nav ul li {
         display: block;
         padding: 10px 0;
+        margin: 10px 0
     }
 
     /* Show the menu when the checkbox is checked */
-    #menu-toggle:checked + label + nav ul {
+    #menu-toggle:checked ~ nav {
         display: flex;
-    }
+    }
+
 }
 
 /* Hero Section */
