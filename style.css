@@ -26,32 +26,43 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #D2BBA0;
-    flex-wrap: wrap;
 }
 
-h1, h2, h3 {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    color: #5A3E2B;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-    color: #6D4C41;
-}
-
+/* Logo */
 .logo img {
     width: 100px;
     height: auto;
     max-height: 50px;
 }
 
+/* Hide default checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+/* Desktop Navigation */
 nav ul {
     list-style: none;
-    /*display: flex; */
+    display: flex;
     gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
@@ -73,29 +84,31 @@ nav ul li a:hover {
         text-align: center;
     }
 
+    /* Show the hamburger menu */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Hide the menu by default */
     nav ul {
-        flex-direction: column !important;
-        display: flex !important;
+        display: none;
+        flex-direction: column;
         width: 100%;
         text-align: center;
         background: #ddd;
         padding: 15px 0;
-        border-radius: 10px; /* Optional: rounded corners */
+        border-radius: 10px;
     }
 
     nav ul li {
-        display: block
+        display: block;
         padding: 10px 0;
     }
 
-    nav ul li a {
-        display: block; /* Biar link jadi full width */
-        width: 100%;
-        padding: 10px;
-        text-decoration: none;
-        color: #000;
+    /* Show the menu when the checkbox is checked */
+    #menu-toggle:checked ~ nav ul {
+        display: flex;
     }
-
 }
 
 /* Hero Section */
@@ -259,9 +272,8 @@ footer {
 }
 
 .social-media-section h2 {
-    margin-bottom: 15px; /* Sesuaikan dengan jarak yang diinginkan */
+    margin-bottom: 15px;
 }
-
 
 .social-links {
     display: flex;
