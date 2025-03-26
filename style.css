@@ -66,32 +66,11 @@ nav ul li a:hover {
     color: #5A3E2B;
 }
 
-/* Responsive Navigation */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    background-color: #5A3E2B;
-    height: 2px;
-    width: 25px;
-    margin: 3px 0;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-#menu-toggle:checked + .nav-links {
-    display: flex;
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     nav ul {
@@ -100,16 +79,13 @@ nav ul li a:hover {
         width: 100%;
         text-align: center;
         background: #ddd;
+        gap: 10px; /* Jarak antar item */
+        margin-top: 10px; /* Jarak antara logo dan menu */
     }
 
     nav ul.active {
         display: flex;
     }
-
-    .hamburger {
-        display: flex;
-    }
-}
 
 /* Hero Section */
 .hero {
