@@ -89,15 +89,13 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        display: block; /* Makes the link take full width */
-        padding: 10px 20px; /* Adjust padding */
-        border-radius: 5px; /* Rounded buttons */
-        transition: background 0.3s ease;
+        display: block; /* Biar link jadi full width */
+        width: 100%;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
     }
 
-    nav ul li a:hover {
-        background: #bbb; /* Light hover effect */
-    }
 }
 
 /* Hero Section */
