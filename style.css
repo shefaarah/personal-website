@@ -9,11 +9,10 @@ html, body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #f8f8f8;
-    height: 100%;
-    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     display: grid;
     flex-direction: column;
+    grid-template-rows: auto 1fr auto;
 }
 
 .main-content {
@@ -66,11 +65,32 @@ nav ul li a:hover {
     color: #5A3E2B;
 }
 
+/* Responsive Navigation */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: #5A3E2B;
+    height: 2px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .nav-links {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     nav ul {
@@ -81,15 +101,14 @@ nav ul li a:hover {
         background: #ddd;
     }
 
-    .nav-links {
-        flex-direction: column; /* Biar menu turun ke bawah */
-        gap: 10px; /* Jarak antar item */
-        margin-top: 10px; /* Jarak antara logo dan menu */
-    }
-
     nav ul.active {
         display: flex;
     }
+
+    .hamburger {
+        display: flex;
+    }
+}
 
 /* Hero Section */
 .hero {
@@ -121,13 +140,9 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    position: relative;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
     background-color: #D7B899;
+    padding: 10px;
+    text-align: center;
     width: 100%;
 }
 
@@ -190,7 +205,6 @@ footer {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
-    border-radius: 15px;
 }
 
 .portfolio-image {
@@ -229,7 +243,7 @@ footer {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 15px;
+    border-radius: 4px;
 }
 
 .contact-form button {
@@ -239,7 +253,6 @@ footer {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
-    border-radius: 15px;
 }
 
 .contact-form button:hover {
@@ -251,11 +264,7 @@ footer {
 .social-media-section {
     background-color: #EFE5DC;
     padding: 60px 0;
-    text-align: center
-}
-
-.social-media-section h2 {
-    margin-bottom: 20px; /* Sesuaikan dengan jarak yang diinginkan */
+    text-align: center;
 }
 
 .social-links {
