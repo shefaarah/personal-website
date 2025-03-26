@@ -66,27 +66,6 @@ nav ul li a:hover {
 }
 
 /* Responsive Navigation */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    background-color: #5A3E2B;
-    height: 2px;
-    width: 25px;
-    margin: 3px 0;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-#menu-toggle:checked + .nav-links {
-    display: flex;
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -95,18 +74,19 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column;
-        display: none;
+        display: flex;
         width: 100%;
         text-align: center;
         background: #ddd;
+        padding: 10px 0;
     }
 
     nav ul.active {
         display: flex;
     }
-
-    .hamburger {
-        display: flex;
+    
+    nav ul li {
+        padding: 10px 0;
     }
 }
 
