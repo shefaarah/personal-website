@@ -55,13 +55,16 @@ header {
     transform: translateY(-50%);
 }
 
-.bar {
+.menu-icon .bar {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: whitesmoke;
 }
 
 /* Desktop Navigation */
+nav {
+    display: flex;
+}
 .nav-links {
     list-style: none;
     display: flex;
@@ -107,8 +110,6 @@ nav ul li a:hover {
         text-align: center;
     }
 
-
-    /* Hide the menu by default */
     .nav-links {
         flex-direction: column;
         padding: 10px 0;
