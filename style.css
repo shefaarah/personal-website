@@ -27,6 +27,8 @@ header {
     padding: 20px;
     background-color: #D2BBA0;
     position: relative;
+    min-height: 70px;
+    flex-wrap: nowrap;
 }
 
 /* Logo */
@@ -46,7 +48,6 @@ header {
     display: none;
     flex-direction: column;
     gap: 5px;
-    cursor: pointer;
     cursor: pointer;
     position: absolute;
     right: 20px; /* Geser ke kanan */
@@ -75,7 +76,6 @@ nav ul li a {
     text-decoration: none;
     color: #3E2723;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -112,7 +112,7 @@ nav ul li a:hover {
     }
 
     /* Show the menu when the checkbox is checked */
-    #menu-toggle:checked ~ nav ul {
+    #menu-toggle:checked + label + nav ul {
         display: flex;
     }
 }
