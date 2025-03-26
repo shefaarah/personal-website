@@ -1,4 +1,4 @@
-/* global styles */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +7,12 @@
 
 html, body {
     font-family: 'Poppins', sans-serif;
-    color:#333;
-    margin: 0;
-    padding: 0;
+    color: #333;
     background-color: #f8f8f8;
-    overflow: hidden;
-    overflow: auto;
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
@@ -22,6 +20,7 @@ html, body {
     flex: 1;
 }
 
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -45,66 +44,29 @@ p {
 }
 
 .logo img {
-    width: 100px; /* Sesuai rekomendasi */
-    height: auto; /* Biar tetap proporsional */
-    max-height: 50px; /* Batasi tinggi maksimal */
-    padding-left: 0.5px;
-    padding: auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 120px; /* Sesuaikan ukuran */
-        height: auto; /* Agar proporsional */
-    }
+    width: 100px;
+    height: auto;
+    max-height: 50px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #3E2723;
     font-weight: bold;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: auto;
+    transition: color 0.3s;
 }
 
-.nav-links li {
-    margin: 0 15px;
+nav ul li a:hover {
+    color: #5A3E2B;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
+/* Responsive Navigation */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -118,34 +80,30 @@ nav ul li a {
     margin: 3px 0;
 }
 
-button {
-    background-color: #A67B5B;
-    color: white;
-    border: none;
+#menu-toggle {
+    display: none;
 }
-button:hover {
-    background-color: #8C5B3B; /* Warna lebih gelap saat hover */
+
+#menu-toggle:checked + .nav-links {
+    display: flex;
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    header {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #ddd;
-        width: 200px;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
         text-align: center;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        background: #ddd;
     }
 
-    .nav-links.active {
+    nav ul.active {
         display: flex;
-    }
-
-    .nav-links li {
-        padding: 15px 0;
     }
 
     .hamburger {
@@ -153,7 +111,7 @@ button:hover {
     }
 }
 
-
+/* Hero Section */
 .hero {
     width: 100%;
     display: flex;
@@ -173,49 +131,27 @@ button:hover {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
     background-color: #555;
+    transform: scale(1.05);
 }
 
+/* Footer */
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #D7B899;
-    width: 100%; /* Ganti dari 100vw ke 100% */
-    max-width: 100%;
-    padding-top: 10px;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: row; /* Pastikan tetap horizontal */
-    }
-
-    nav ul {
-        flex-direction: row; /* Biar menu tetap sejajar */
-        justify-content: flex-end; /* Menu tetap ke kanan */
-    }
-    
-    nav ul li {
-        margin: 10px 0;
-    }
-    
-    .hero {
-        padding: 30px 15px;
-    }
-    
-    .cta-button {
-        font-size: 14px;
-        padding: 8px 16px;         
-    }
-}
-
+/* Introduction Section */
 .intro-section {
     display: flex;
     background-color: #EFE5DC;
@@ -241,7 +177,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -253,35 +188,12 @@ footer {
 }
 
 .text-container {
-    width: auto;
-    padding-top: 20px;
-    max-width: 500px; /* Sesuaikan dengan lebar yang diinginkan */
-    margin-bottom: 30px; /* Atur sesuai kebutuhan */
+    max-width: 500px;
     line-height: 1.6;
-
 }
 
-@media (max-width: 768px) {
-    .intro-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .image-container {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 15px;
-    }
-    
-    .text-container {
-        width: auto;
-        padding: 0 15px;
-    }
-}
-
+/* Portfolio Section */
 .portfolio-section {
-    max-width: auto;
     margin: 0 auto;
     padding: 50px 20px;
     display: flex;
@@ -292,20 +204,18 @@ footer {
 
 .portfolio-item {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     background-color: #EFE5DC;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    width: 100%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .portfolio-image {
     flex: 0 0 300px;
     background-color: #e8e1d9;
-    overflow: hidden;
 }
 
 .portfolio-image img {
@@ -319,34 +229,11 @@ footer {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .portfolio-image {
-        width: 100%;
-    }
-}
-
+/* Contact Section */
 .contact-section {
-    background-color: #f5f5f5;
+    background-color: #E3D6C8;
     padding: 40px 20px;
     text-align: center;
-    background-color: #E3D6C8;
-}
-
-.contact-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.contact-section h2 {
-    font-size: 28px;
-    color: #222;
-    margin-bottom: 30px;
-    font-weight: bold;
 }
 
 .contact-form {
@@ -357,32 +244,12 @@ footer {
     gap: 10px;
 }
 
-.form-row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    width: 100%;
-    align-items: center;
-}
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.contact-form input {
-    flex: 1;
-    min-width: 0; /* Allows flex items to shrink below content size */
-}
-
-.contact-form textarea {
-    flex: 1.5;
-    min-width: 0;
-    resize: vertical;
+    border-radius: 15px;
 }
 
 .contact-form button {
@@ -391,50 +258,24 @@ footer {
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 15px;
 }
 
 .contact-form button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-        width: 100%;
-    }
-    
-    .contact-form textarea {
-        rows: 3;
-    }
-}
-
+/* Social Media Section */
 .social-media-section {
     background-color: #EFE5DC;
     padding: 60px 0;
-    text-align: center;
-    margin-top: -10px;
-}
-
-.social-container {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: center
 }
 
 .social-media-section h2 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-    letter-spacing: 0.5px;
-    margin-top: -10px;
+    margin-bottom: 20px; /* Sesuaikan dengan jarak yang diinginkan */
 }
 
 .social-links {
@@ -455,17 +296,12 @@ footer {
 
 .social-link i {
     font-size: 24px;
-    margin-bottom: 10px;
     height: 60px;
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
     background-color: #f0f0ec;
     transition: all 0.3s ease;
-}
-
-.social-link span {
-    font-size: 14px;
 }
 
 .social-link:hover {
@@ -477,17 +313,23 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .social-links {
-        gap: 20px;
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-    .social-link i {
-        font-size: 20px;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
+
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
     }
 }
 
@@ -496,4 +338,3 @@ footer {
         gap: 15px;
     }
 }
-
