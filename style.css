@@ -6,7 +6,7 @@
 }
 
 html, body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Lora';
     color: #333;
     background-color: #f8f8f8;
     min-height: 100vh;
